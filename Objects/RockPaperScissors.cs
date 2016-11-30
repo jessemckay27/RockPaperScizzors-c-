@@ -25,18 +25,29 @@ namespace RockPaperScissors.Objects
       _playerTwoChoice = int.Parse(user2choice);
     }
 
-    //playerchoice values:  rock = 1, scissors = 2, paper = 3
+    //playerchoice values:  rock = 1, paper = 2, scissors = 3
 
     public string GetResult()
     {
       if (_playerOneChoice == _playerTwoChoice)
       {
         return "It's a draw!";
+        // Console.WriteLine("It's a draw!");
       }
-      else if (_playerOneChoice   _playerTwoChoice)
+      else if (_playerOneChoice - _playerTwoChoice == 1 || _playerOneChoice + _playerTwoChoice == 4)
+      //           rock(1)      - scissors(3)      == 4
+      //          paper(2)      -     rock(1)      == 1
+      //       scissors(3)      -    paper(2)      == 1
+      {
+        return "Player 1 Wins!"
+      }
+      else
+      {
+        return "Player 2 Wins!"
+      }
+
+
     }
-
-
 
   }
 }
