@@ -1,0 +1,28 @@
+form takes two inputs
+  User1: Rock, Paper or Scissors
+  User2: Rock, Paper or Scissors
+
+create variables for user inputs
+Example: _player1Choice
+Example: _player2Choice
+
+create object constructor that takes two inputs(user1, user2)
+
+
+
+
+
+
+compare each user input
+
+User1: Rock
+User2: Rock
+Output: Draw
+
+User1: Rock
+User2: Paper
+Output: User2 Wins!
+
+User1: Rock
+User2: Scissors
+Output: User1 Wins!
