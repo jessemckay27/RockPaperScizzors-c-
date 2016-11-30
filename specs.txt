@@ -10,11 +10,9 @@ create object constructor that takes two inputs(user1, user2)
 
 
 
-
-
-
 compare each user input
 
+Specification: If User 1 enters "rock" then user 2 enters "rock", the result is a draw;
 User1: Rock
 User2: Rock
 Output: Draw

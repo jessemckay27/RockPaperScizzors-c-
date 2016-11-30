@@ -8,18 +8,18 @@ namespace RockPaperScissors.Objects
     private int _playerOneChoice; //may need to be an int
     private int _playerTwoChoice; //may need to be an int
 
-    public string GetPlayerOneChoice()
+    public int GetPlayerOneChoice()
     {
       return _playerOneChoice;
     }
 
-    public string GetPlayerTwoChoice()
+    public int GetPlayerTwoChoice()
     {
       return _playerTwoChoice;
     }
 
 
-    public RockPaperScissors( string user1choice, string user2choice)
+    public RPSGame(string user1choice, string user2choice)
     {
       _playerOneChoice = int.Parse(user1choice);
       _playerTwoChoice = int.Parse(user2choice);
@@ -34,20 +34,21 @@ namespace RockPaperScissors.Objects
         return "It's a draw!";
         // Console.WriteLine("It's a draw!");
       }
-      else if (_playerOneChoice - _playerTwoChoice == 1 || _playerOneChoice + _playerTwoChoice == 4)
-      //           rock(1)      - scissors(3)      == 4
+      else if (_playerOneChoice - _playerTwoChoice == 1)
       //          paper(2)      -     rock(1)      == 1
       //       scissors(3)      -    paper(2)      == 1
       {
-        return "Player 1 Wins!"
+        return "Player 1 Wins!";
+      }
+      else if (_playerTwoChoice - _playerOneChoice == 2)
+      //       scissors(3)     -   rock(1)        == 2
+      {
+        return "Player 1 Wins!";
       }
       else
       {
-        return "Player 2 Wins!"
+        return "Player 2 Wins!";
       }
-
-
     }
-
   }
 }
